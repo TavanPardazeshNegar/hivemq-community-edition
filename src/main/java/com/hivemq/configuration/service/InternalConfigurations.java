@@ -16,6 +16,7 @@
 package com.hivemq.configuration.service;
 
 import com.hivemq.migration.meta.PersistenceType;
+import org.rocksdb.CompressionType;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -406,4 +407,6 @@ public class InternalConfigurations {
     public static final AtomicInteger AUTH_PROCESS_TIMEOUT = new AtomicInteger(30);
 
     public static final AtomicBoolean PUBLISH_PAYLOAD_FORCE_FLUSH = new AtomicBoolean(true);
+
+    public static final CompressionType PAYLOAD_PERSISTENCE_BLOB_COMPRESSION_TYPE = CompressionType.NO_COMPRESSION;
 }
